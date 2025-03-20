@@ -60,7 +60,7 @@ class Frontend(object):
         the Front Door '.azurefd.net' hostname is configure as documented here:
         https://docs.microsoft.com/en-us/azure/frontdoor/front-door-custom-domain-https
         The document mentions that Front Door will fall back to email validation if a CNAME is not configured. We have
-        found that, for at least the nccinfra and ncc frontends, Front Door will get stuck in the domain validation
+        found that, for at least some frontends, Front Door will get stuck in the domain validation
         state whem an attempt is made to configure a Front Door managed cert. The only way to rollback is to recreate
         the frontend (outage city; population: you). This check will cause the route manager to fail before attempting
         to create a Front Door managed cert with an unsupported DNS configuration.
